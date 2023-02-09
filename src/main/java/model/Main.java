@@ -13,10 +13,11 @@ public class Main {
 
         // Ouverture de la transaction
         EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
 
         // Création d'une formation et d'un formateur
-        Formation formation = new Formation("Hibernate",3,"Paris");
         Formateur formateur = new Formateur("George","34","Masculin");
+        Formation formation = new Formation("Hibernate",3,"Paris", formateur);
 
         // Persistance des objets dans la BDD
         entityManager.persist(formation);

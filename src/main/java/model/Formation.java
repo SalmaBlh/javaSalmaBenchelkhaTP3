@@ -19,11 +19,16 @@ public class Formation {
     @ManyToOne(cascade=CascadeType.ALL)
     private Formateur formateur;
 
-    public Formation(String label, int duree, String lieu) {
+    public Formation(String label, int duree, String lieu, Formateur formateur) {
         super();
         this.label = label;
         this.duree = duree;
         this.lieu = lieu;
+        this.formateur = formateur;
+    }
+
+    public Formation() {
+
     }
 
     public int getId() {

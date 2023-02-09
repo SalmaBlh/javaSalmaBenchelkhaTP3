@@ -15,6 +15,10 @@ public class Formateur {
     private String age;
     private String sexe;
 
+    public Formateur() {
+
+    }
+
     public int getId() {
         return id;
     }
